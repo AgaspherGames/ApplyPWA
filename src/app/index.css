@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.light {
+  background: radial-gradient(rgba(14, 165, 233, 0.4), transparent 66%);
+}
+
+.page {
+  /* animation: fade-in 15s cubic-bezier(0.075, 0.82, 0.165, 1);  */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    margin-top: 100%;
+    rotate: 360deg;
+  }
+  10% {
+    scale: 5;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+    rotate: 0deg;
+  }
+}
+
+ion-content {
+  --keyboard-offset: 0 !important;
+}
+
+.cropper-view-box,
+.cropper-face {
+  border-radius: 100%;
+}
+.cropper-line {
+  width: 0px;
+}
+
+.ion-transparent-bg {
+  --background: transparent !important;
+}
+
+.custom-input ion-input[type="date"]:not(.has-value)::before {
+  content: attr(data-placeholder);
+  color: var(--placeholder-color);
+  opacity: var(--placeholder-opacity);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+.custom-input ion-input[type="date"]:focus::before {
+  display: none;
+}
+
+.custom-input ion-input[type="date"]:focus::before,
+.custom-input ion-input[type="date"]:valid::before {
+  display: none;
+}
+
+ion-input[type="date"].ios:not(.has-value) > input::before,
+ion-input[type="time"].ios:not(.has-value) > input::before {
+  content: attr(data-placeholder);
+  color: var(--placeholder-color);
+  opacity: var(--placeholder-opacity);
+}
+
+ion-input[type="date"]:not(.has-value)
+  input[type="date"]::-webkit-datetime-edit-text {
+  -webkit-appearance: none;
+  display: none;
+}
+ion-input[type="date"]:not(.has-value)
+  input[type="date"]::-webkit-datetime-edit-month-field {
+  -webkit-appearance: none;
+  display: none;
+}
+ion-input[type="date"]:not(.has-value)
+  input[type="date"]::-webkit-datetime-edit-day-field {
+  -webkit-appearance: none;
+  display: none;
+}
+ion-input[type="date"]:not(.has-value)
+  input[type="date"]::-webkit-datetime-edit-year-field {
+  -webkit-appearance: none;
+  display: none;
+}
+
+.scroll-shadows {
+  background: linear-gradient(#100f0e 33%, rgba(255, 255, 255, 0)),
+    linear-gradient(rgba(255, 255, 255, 0), #100f0e 66%) 0 100%,
+    linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)) 0 0,
+    linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)) 0 100%;
+
+  background-color: #100f0e;
+  background-repeat: no-repeat;
+  background-attachment: local, local, scroll, scroll;
+  background-size: 100% 300px, 100% 300px, 100% 100px, 100% 100px;
+}
+
+ion-tab-button.no-text.tab-selected {
+  --ionicon-stroke-width: 42px;
+  font-size: 36px;
+}
+
+.action-sheet-group {
+  --background: #1c1917;
+}
+.action-sheet-group .action-sheet-button {
+  border-top: 1px solid #292524;
+}
+
+.error-toast {
+  --background: rgba(59, 0, 0, 1);
+}

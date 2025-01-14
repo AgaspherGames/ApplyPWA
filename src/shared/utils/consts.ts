@@ -1,0 +1,1 @@
+export const defaultAvatarPath = "/images/avatars/avatar_1.jpg" 
